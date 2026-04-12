@@ -1,0 +1,16 @@
+*{
+    top: 0;
+    left: 0;
+}
+.quote-wrapper{
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .quote-card{
+        background-color: #ffff;
+        width: 400px;
+        height:350px;
+    }
+}
