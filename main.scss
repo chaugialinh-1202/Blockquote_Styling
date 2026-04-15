@@ -1,16 +1,46 @@
-*{
-    top: 0;
-    left: 0;
+* {
+  margin: 0;
 }
-.quote-wrapper{
-    background-color: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    .quote-card{
-        background-color: #ffff;
-        width: 400px;
-        height:350px;
+.quote-wrapper {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .quote-card {
+    background-color: #ffff;
+    width: 664;
+    height: 278px;
+    border-left: 5px solid #2a80b5;
+  }
+  .quote-icon-start {
+    top: -10px;
+    left: -25px;
+    color: rgb(192, 196, 195);
+    font-size: 40px;
+    font-family: arial, sans-serif;
+    position: absolute;
+  }
+  .quote-icon-end {
+    font-size: 40px;
+    color: #ccc;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+  }
+
+  p {
+    font-size: 28px;
+    font-family: arial, sans-serif;
+    .drop-cap {
+      color: #2a80b5;
+      font-size: 100px;
     }
+  }
+  .quote-author {
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+  }
 }
