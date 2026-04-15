@@ -1,46 +1,58 @@
-* {
+@charset "UTF-8";
+.quote-container {
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 40px 60px;
+  background: #fff;
+  border-left: 6px solid #2980b9;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  position: relative;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.quote-container .quote-text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
   margin: 0;
+  position: relative;
 }
-
-.quote-wrapper {
-  background-color: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.quote-container .quote-text::first-letter {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #2980b9;
+  float: left;
+  margin-right: 12px;
+  line-height: 0.85;
+  text-transform: uppercase;
+  padding-top: 5px;
 }
-.quote-wrapper .quote-card {
-  background-color: white;
-  width: 664;
-  height: 278px;
-  border-left: 5px solid #2a80b5;
-}
-.quote-wrapper .quote-icon-start {
-  top: -10px;
-  left: -25px;
-  color: rgb(192, 196, 195);
-  font-size: 40px;
-  font-family: arial, sans-serif;
+.quote-container .quote-text::before {
+  content: "“";
+  font-size: 5rem;
+  color: #e0e0e0;
   position: absolute;
+  font-family: Georgia, serif;
+  line-height: 1;
+  left: -45px;
+  top: -25px;
 }
-.quote-wrapper .quote-icon-end {
-  font-size: 40px;
-  color: #ccc;
-  font-family: Arial, sans-serif;
+.quote-container .quote-text::after {
+  content: "”";
+  font-size: 5rem;
+  color: #e0e0e0;
   position: absolute;
-  bottom: -20px;
-  right: 0;
+  font-family: Georgia, serif;
+  line-height: 1;
+  right: -25px;
+  bottom: -60px;
 }
-.quote-wrapper p {
-  font-size: 28px;
-  font-family: arial, sans-serif;
-}
-.quote-wrapper p .drop-cap {
-  color: #2a80b5;
-  font-size: 100px;
-}
-.quote-wrapper .quote-author {
-  font-size: 28px;
-  font-family: Arial, Helvetica, sans-serif;
+.quote-container .author {
+  display: block;
   text-align: right;
+  margin-top: 25px;
+  font-weight: 600;
+  color: rgb(127.5, 127.5, 127.5);
+  letter-spacing: 1px;
+  text-transform: none;
 }/*# sourceMappingURL=main.css.map */

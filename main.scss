@@ -1,46 +1,68 @@
-* {
-  margin: 0;
-}
-.quote-wrapper {
-  background-color: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  .quote-card {
-    background-color: #ffff;
-    width: 664;
-    height: 278px;
-    border-left: 5px solid #2a80b5;
-  }
-  .quote-icon-start {
-    top: -10px;
-    left: -25px;
-    color: rgb(192, 196, 195);
-    font-size: 40px;
-    font-family: arial, sans-serif;
-    position: absolute;
-  }
-  .quote-icon-end {
-    font-size: 40px;
-    color: #ccc;
-    font-family: Arial, sans-serif;
-    position: absolute;
-    bottom: -20px;
-    right: 0;
-  }
+$primary-color: #2980b9;
+$text-color: #333;
+$quote-mark-color: #e0e0e0;
+$font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-  p {
-    font-size: 28px;
-    font-family: arial, sans-serif;
-    .drop-cap {
-      color: #2a80b5;
-      font-size: 100px;
+@mixin quote-mark($content) {
+  content: $content;
+  font-size: 5rem;
+  color: $quote-mark-color;
+  position: absolute;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.quote-container {
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 40px 60px;
+  background: #fff;
+  border-left: 6px solid $primary-color;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  position: relative;
+  font-family: $font-main;
+
+  .quote-text {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: $text-color;
+    font-style: italic;
+    margin: 0;
+    position: relative;
+
+    &::first-letter {
+      font-size: 3.8rem;
+      font-weight: 800;
+      color: $primary-color;
+      float: left;
+      margin-right: 12px;
+      line-height: 0.85;
+      text-transform: uppercase;
+      padding-top: 5px;
+    }
+
+    // Dấu ngoặc kép mở
+    &::before {
+      @include quote-mark("“");
+      left: -45px;
+      top: -25px;
+    }
+
+    // Dấu ngoặc kép đóng
+    &::after {
+      @include quote-mark("”");
+      right: -25px;
+      bottom: -60px;
     }
   }
-  .quote-author {
-    font-size: 28px;
-    font-family: Arial, Helvetica, sans-serif;
+
+  .author {
+    display: block;
     text-align: right;
+    margin-top: 25px;
+    font-weight: 600;
+    color: lighten($text-color, 30%);
+    letter-spacing: 1px;
+    text-transform: none;
   }
 }
